@@ -1,0 +1,7 @@
+name = "xmusic"
+pages_build_output_dir = "."
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mysongs"
+database_id = "d3419cb6-b901-4b87-9980-287b02ba1b87"
