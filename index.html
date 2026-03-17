@@ -75,7 +75,7 @@
         /* ── HEADER ── */
         .header {
             flex-shrink: 0;
-            padding: 20px 24px 0;
+            padding: 10px 24px 0;
             text-align: center;
         }
         .orn {
@@ -98,13 +98,13 @@
         }
         .hd-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.0rem; font-weight: 300;
+            font-size: 1.6rem; font-weight: 300;
             letter-spacing: 0.03em; color: var(--text); line-height: 1.1;
         }
         .hd-title em { font-style: italic; color: var(--gold-lt); }
         .hd-amp {
             font-family: 'Cormorant Garamond', serif;
-            font-style: italic; color: var(--muted); font-size: 1.5rem;
+            font-style: italic; color: var(--muted); font-size: 1.2rem;
         }
         .hd-sub {
             font-size: 0.62rem; color: var(--muted);
@@ -118,15 +118,15 @@
         /* ── PLAYER ── */
         .player {
             flex-shrink: 0;
-            padding: 12px 26px 10px;
+            padding: 8px 20px 5px;
             display: flex; flex-direction: column; align-items: center;
         }
 
         /* Cover */
         .cover-outer {
             position: relative;
-            width: 155px; height: 155px;
-            margin-bottom: 16px;
+            width: 110px; height: 110px;
+            margin-bottom: 10px;
         }
         .cover-ring {
             position: absolute; inset: -7px; border-radius: 50%;
@@ -155,12 +155,12 @@
         .song-meta {
             width: 100%; display: flex;
             align-items: center; justify-content: space-between;
-            margin-bottom: 12px; gap: 10px;
+            margin-bottom: 8px; gap: 10px;
         }
         .song-text { flex: 1; overflow: hidden; }
         .song-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.35rem; font-weight: 400;
+            font-size: 1.25rem; font-weight: 400;
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
             line-height: 1.2;
         }
@@ -177,7 +177,7 @@
         .btn-fav svg { width: 21px; height: 21px; fill: currentColor; }
 
         /* Progress */
-        .prog-wrap { width: 100%; margin-bottom: 12px; }
+        .prog-wrap { width: 100%; margin-bottom: 8px; }
         .prog-track {
             width: 100%; height: 3px;
             background: rgba(201,147,90,0.13);
@@ -210,7 +210,7 @@
         .ctrl.on { color: var(--gold); filter: drop-shadow(0 0 5px var(--gold)); }
         .ctrl svg { width: 22px; height: 22px; fill: currentColor; }
         .ctrl-main {
-            width: 56px; height: 56px;
+            width: 50px; height: 50px;
             background: linear-gradient(135deg, var(--gold-dk), var(--gold), var(--gold-lt));
             border-radius: 50%; color: var(--bg);
             display: flex; align-items: center; justify-content: center;
@@ -337,16 +337,6 @@
 
         audio { display: none; }
 
-        /* ── TINY PHONES ── */
-        @media (max-height: 680px) {
-            .header { padding: 10px 24px 0; }
-            .hd-title { font-size: 1.65rem; }
-            .cover-outer { width: 120px; height: 120px; margin-bottom: 10px; }
-            .player { padding: 8px 26px 8px; }
-            .ctrl-main { width: 50px; height: 50px; }
-            .ctrl svg { width: 20px; height: 20px; }
-        }
-
         /* ── DESKTOP ── */
         @media (min-width: 800px) {
             .app {
@@ -389,7 +379,6 @@
 
 <div class="app">
 
-    <!-- HEADER (mobile) -->
     <header class="header">
         <div class="orn">
             <div class="orn-line"></div>
@@ -406,7 +395,6 @@
         <span class="hd-divider"></span>
     </header>
 
-    <!-- PLAYER -->
     <div class="player">
         <div class="cover-outer">
             <div class="cover-ring" id="cover-ring"></div>
@@ -455,7 +443,6 @@
         </div>
     </div>
 
-    <!-- TABS -->
     <div class="bottom">
         <div class="tabs">
             <div class="tab on" onclick="switchTab(this,'pane-pl')">Playlist</div>
